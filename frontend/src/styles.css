@@ -1,0 +1,426 @@
+:root {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  color: #1f2937;
+  background: #edf2f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #edf2f7;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.email-shell {
+  width: min(1680px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.upload-card,
+.email-paper {
+  background: #ffffff;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05);
+}
+
+.upload-card {
+  padding: 22px;
+}
+
+.upload-header h1 {
+  margin: 8px 0 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.upload-panel {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.upload-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #dbe4f0;
+}
+
+.field span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field strong {
+  color: #1f2937;
+  word-break: break-all;
+  font-size: 13px;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.action-row-wrap {
+  flex-wrap: wrap;
+}
+
+.submit {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-width: 200px;
+  background: #1677ff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+
+.submit-secondary {
+  background: #2563eb;
+}
+
+.submit:hover:enabled {
+  opacity: 0.92;
+}
+
+.submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.message {
+  flex: 1;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  border: 1px solid #d6dee8;
+}
+
+.log-panel {
+  margin: 0;
+  min-height: 120px;
+  max-height: 320px;
+  overflow: auto;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 12px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid #1e293b;
+}
+
+.email-paper {
+  padding: 26px 28px 22px;
+}
+
+.email-header,
+.email-footer {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #111827;
+}
+
+.email-header p,
+.email-footer p {
+  margin: 0 0 6px;
+}
+
+.email-section {
+  margin-top: 12px;
+}
+
+.section-title {
+  margin: 10px 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.email-paragraph {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.report-table {
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 4px 0 10px 28px;
+  background: #ffffff;
+  border: 2px solid #4b5563;
+  font-family: 'SimSun', 'Songti SC', serif;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #4b5563;
+  text-align: center;
+  padding: 2px 8px;
+  font-size: 13px;
+  line-height: 1.2;
+  min-width: 84px;
+  color: #111827;
+}
+
+.report-table tbody th {
+  font-weight: 700;
+  background: #ffffff;
+}
+
+.group-header {
+  background: #b8cce4;
+  font-weight: 700;
+}
+
+.side-header,
+.sub-header {
+  background: #dbe5f1;
+  font-weight: 700;
+}
+
+.health-red {
+  color: #c00000;
+}
+
+.health-yellow {
+  color: #bf8f00;
+}
+
+.health-green {
+  color: #008000;
+}
+
+.cell-placeholder {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.charts-grid {
+  margin: 8px 0 14px 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-left: 1px solid #b7b7b7;
+  border-top: 1px solid #b7b7b7;
+}
+
+.chart-card {
+  border-right: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+  background: #ffffff;
+}
+
+.svg-chart-card {
+  padding: 0;
+}
+
+.chart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: 'SimSun', 'Songti SC', serif;
+}
+
+.svg-chart-title {
+  font-size: 30px;
+  font-weight: 700;
+  fill: #4d4d4d;
+}
+
+.svg-axis-text {
+  font-size: 22px;
+  fill: #595959;
+}
+
+.svg-grid-line {
+  stroke: #e3e3e3;
+  stroke-width: 1;
+}
+
+.svg-axis-line {
+  stroke: #d9d9d9;
+  stroke-width: 1;
+}
+
+.svg-bar-red {
+  fill: #c00000;
+}
+
+.svg-bar-yellow {
+  fill: #ffd966;
+}
+
+.svg-bar-green {
+  fill: #00c060;
+}
+
+.svg-bar-value {
+  font-size: 21px;
+  font-weight: 700;
+  fill: #4d4d4d;
+}
+
+.svg-x-label {
+  font-size: 21px;
+  fill: #7a7a7a;
+}
+
+.svg-legend-text {
+  font-size: 18px;
+  fill: #666666;
+}
+
+.svg-legend-red {
+  fill: #c00000;
+}
+
+.svg-legend-yellow {
+  fill: #ffd966;
+}
+
+.svg-legend-green {
+  fill: #00b050;
+}
+
+.health-table th,
+.health-table td,
+.launch-table th,
+.launch-table td {
+  min-width: 92px;
+}
+
+.strategy-table th,
+.strategy-table td {
+  min-width: 78px;
+}
+
+.stage-table th,
+.stage-table td {
+  min-width: 74px;
+}
+
+.launch-table .sub-header:first-child {
+  min-width: 180px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 14px;
+  }
+
+  .upload-card,
+  .email-paper {
+    padding: 16px;
+  }
+
+  .upload-grid,
+  .action-row,
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .submit {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .report-table {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .report-table th,
+  .report-table td {
+    min-width: 0;
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+
+  .charts-grid {
+    margin-left: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .chart-card {
+    border: 1px solid #b7b7b7;
+  }
+
+  .svg-chart-title {
+    font-size: 18px;
+  }
+
+  .svg-axis-text {
+    font-size: 12px;
+  }
+
+  .svg-x-label {
+    font-size: 10px;
+  }
+
+  .svg-legend-text {
+    font-size: 11px;
+  }
+}
